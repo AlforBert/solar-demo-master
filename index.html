@@ -3,20 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Big Sun Solar - Solar Net Metering Mian Channu</title>
-    <meta name="description" content="Premier AEDB certified solar EPC company in Mian Channu. 5kW, 10kW & 20kW turnkey On-Grid & Hybrid solar solutions with net metering." />
-    <meta property="og:title" content="Big Sun Solar - Solar Net Metering Mian Channu" />
-    <meta property="og:description" content="Premier AEDB certified solar EPC company in Mian Channu. 5kW, 10kW & 20kW turnkey On-Grid & Hybrid solar solutions with net metering." />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-
-    <!-- Google Fonts: Plus Jakarta Sans -->
+    <title>Big Sun Solar - Multi-Page Solar Net Metering</title>
+    <meta name="description" content="AEDB Certified solar EPC company providing residential, commercial & turnkey net-metering solutions." />
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
     <!-- FontAwesome 6 Icons CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -36,26 +32,26 @@
       input[type=range]::-webkit-slider-thumb {
         -webkit-appearance: none;
         appearance: none;
-        width: 24px;
-        height: 24px;
+        width: 22px;
+        height: 22px;
         border-radius: 50%;
         background: #15803d;
         border: 3px solid #ffffff;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
         cursor: pointer;
       }
       input[type=range]::-moz-range-thumb {
-        width: 24px;
-        height: 24px;
+        width: 22px;
+        height: 22px;
         border-radius: 50%;
         background: #15803d;
         border: 3px solid #ffffff;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
         cursor: pointer;
       }
     </style>
   </head>
-  <body class="bg-white text-slate-800 font-sans antialiased pb-20 md:pb-0">
+  <body class="bg-white text-slate-800 font-sans antialiased pb-16 md:pb-0">
 
     <!-- 1. TOP BAR -->
     <div class="bg-slate-900 text-slate-200 text-xs py-2 px-4 border-b border-slate-800">
@@ -65,13 +61,13 @@
             <i class="fa-solid fa-circle-check"></i> AEDB Certified (Category V-1)
           </span>
           <span class="text-slate-600 hidden sm:inline">&middot;</span>
-          <span class="text-amber-300 font-medium">Green Meter Approved</span>
+          <span class="text-amber-300 font-medium">LESCO, FESCO &amp; MEPCO Net Metering</span>
           <span class="text-slate-600 hidden md:inline">&middot;</span>
-          <span class="text-slate-400 hidden md:inline">Mian Channu</span>
+          <span class="text-slate-400 hidden md:inline">Mian Channu &bull; Lahore &bull; Faisalabad</span>
         </div>
 
         <div class="flex items-center gap-3 font-semibold">
-          <a href="tel:+92300000000" class="text-emerald-400 hover:text-emerald-300 flex items-center gap-1.5">
+          <a href="tel:0300000000" class="text-emerald-400 hover:text-emerald-300 flex items-center gap-1.5">
             <i class="fa-solid fa-phone"></i>
             <span>0300000000</span>
           </a>
@@ -79,13 +75,13 @@
       </div>
     </div>
 
-    <!-- 2. NAVBAR -->
+    <!-- 2. NAVBAR WITH MULTI-PAGE TABS -->
     <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-xs">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="flex items-center justify-between h-16">
           
           <!-- Brand Logo -->
-          <a href="#" class="flex items-center gap-2.5">
+          <a href="javascript:void(0)" onclick="navigateTo('home')" class="flex items-center gap-2.5">
             <div class="w-9 h-9 rounded-lg bg-emerald-700 text-amber-300 flex items-center justify-center font-bold text-lg">
               <i class="fa-solid fa-sun"></i>
             </div>
@@ -95,12 +91,13 @@
             </div>
           </a>
 
-          <!-- Nav Links -->
-          <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-600">
-            <a href="#calculator" class="hover:text-emerald-700 transition-colors">Bill Calculator</a>
-            <a href="#packages" class="hover:text-emerald-700 transition-colors">Solar Packages</a>
-            <a href="#netmetering" class="hover:text-emerald-700 transition-colors">Net Metering</a>
-            <a href="#faq" class="hover:text-emerald-700 transition-colors">FAQ</a>
+          <!-- Nav Tabs (Desktop) -->
+          <nav class="hidden md:flex items-center gap-1 text-sm font-semibold text-slate-600">
+            <button onclick="navigateTo('home')" id="tab-home" class="nav-tab px-3 py-1.5 rounded-lg text-emerald-700 bg-emerald-50 transition-colors">Home</button>
+            <button onclick="navigateTo('residential')" id="tab-residential" class="nav-tab px-3 py-1.5 rounded-lg hover:text-emerald-700 hover:bg-slate-50 transition-colors">Residential</button>
+            <button onclick="navigateTo('commercial')" id="tab-commercial" class="nav-tab px-3 py-1.5 rounded-lg hover:text-emerald-700 hover:bg-slate-50 transition-colors">Commercial</button>
+            <button onclick="navigateTo('team')" id="tab-team" class="nav-tab px-3 py-1.5 rounded-lg hover:text-emerald-700 hover:bg-slate-50 transition-colors">Our Team</button>
+            <button onclick="navigateTo('contact')" id="tab-contact" class="nav-tab px-3 py-1.5 rounded-lg hover:text-emerald-700 hover:bg-slate-50 transition-colors">Contact Us</button>
           </nav>
 
           <!-- Action CTA -->
@@ -122,543 +119,806 @@
 
       <!-- Mobile Menu -->
       <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 bg-white px-4 py-3 space-y-2">
-        <a href="#calculator" onclick="toggleMobileMenu()" class="block py-2 text-sm font-medium text-slate-700">Bill Calculator</a>
-        <a href="#packages" onclick="toggleMobileMenu()" class="block py-2 text-sm font-medium text-slate-700">Solar Packages (5kW, 10kW, 20kW)</a>
-        <a href="#netmetering" onclick="toggleMobileMenu()" class="block py-2 text-sm font-medium text-slate-700">Net Metering Process</a>
-        <a href="#faq" onclick="toggleMobileMenu()" class="block py-2 text-sm font-medium text-slate-700">FAQ</a>
+        <button onclick="navigateTo('home'); toggleMobileMenu();" class="block w-full text-left py-2 text-sm font-semibold text-slate-700 hover:text-emerald-700">Home</button>
+        <button onclick="navigateTo('residential'); toggleMobileMenu();" class="block w-full text-left py-2 text-sm font-semibold text-slate-700 hover:text-emerald-700">Residential Solutions</button>
+        <button onclick="navigateTo('commercial'); toggleMobileMenu();" class="block w-full text-left py-2 text-sm font-semibold text-slate-700 hover:text-emerald-700">Commercial &amp; Industrial</button>
+        <button onclick="navigateTo('team'); toggleMobileMenu();" class="block w-full text-left py-2 text-sm font-semibold text-slate-700 hover:text-emerald-700">Our Engineering Team</button>
+        <button onclick="navigateTo('contact'); toggleMobileMenu();" class="block w-full text-left py-2 text-sm font-semibold text-slate-700 hover:text-emerald-700">Contact Us</button>
         <a href="https://wa.me/92300000000?text=Assalam-o-Alaikum!%20I%20want%20to%20discuss%20solar." target="_blank" rel="noopener noreferrer" class="block w-full text-center bg-emerald-600 text-white py-2 rounded-lg text-xs font-semibold mt-2">
-          <i class="fa-brands fa-whatsapp mr-1"></i> WhatsApp Now
+          <i class="fa-brands fa-whatsapp mr-1"></i> WhatsApp: 0300000000
         </a>
       </div>
     </header>
 
-    <!-- 3. HERO SECTION -->
-    <section class="py-12 sm:py-16 bg-gradient-to-b from-emerald-50/60 to-white border-b border-slate-200">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          
-          <div class="lg:col-span-7 space-y-4">
-            <span class="inline-block bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full">
-              Serving Mian Channu
-            </span>
+    <!-- ==================== PAGE 1: HOME ==================== -->
+    <main id="page-home" class="page-view">
+      <!-- HERO WITH REAL UNSPLASH IMAGE -->
+      <section class="relative bg-slate-900 text-white overflow-hidden py-16 sm:py-24 border-b border-slate-800">
+        <img 
+          src="https://images.unsplash.com/photo-1509391365360-2e959784a276?auto=format&fit=crop&w=1200&q=80" 
+          alt="Solar Panel Farm" 
+          class="absolute inset-0 w-full h-full object-cover opacity-25 mix-blend-luminosity" 
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/90 to-transparent"></div>
 
-            <h1 class="font-display text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
-              Save Up to <span class="text-emerald-700">90% on Your Electricity Bills</span> with Solar
-            </h1>
-
-            <p class="text-base text-slate-600 max-w-xl leading-relaxed">
-              Cut high electricity costs. We supply top-quality solar panels, inverters, and handle your complete Net Metering green meter approval from start to finish.
-            </p>
-
-            <!-- Buttons -->
-            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
-              <a href="https://wa.me/92300000000?text=Assalam-o-Alaikum!%20Here%20is%20my%20electricity%20bill.%20Please%20calculate%20how%20much%20solar%20I%20need." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-emerald-700 hover:bg-emerald-800 text-white px-5 py-3 rounded-xl font-bold text-sm shadow-sm transition-all">
-                <i class="fa-brands fa-whatsapp text-lg text-amber-300"></i>
-                <span>Send Bill on WhatsApp</span>
-              </a>
-              <a href="#calculator" class="inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 px-5 py-3 rounded-xl font-semibold text-sm">
-                <i class="fa-solid fa-calculator text-emerald-600"></i>
-                <span>Calculate Your Cost</span>
-              </a>
-            </div>
-
-            <!-- Trust Stats -->
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-6 border-t border-slate-200">
-              <div class="p-3 bg-white rounded-xl border border-slate-200 text-center">
-                <div class="font-display text-2xl font-bold text-slate-900">450+</div>
-                <div class="text-xs text-slate-500 font-medium">Installs Done</div>
-              </div>
-              <div class="p-3 bg-white rounded-xl border border-slate-200 text-center">
-                <div class="font-display text-2xl font-bold text-slate-900">25 Years</div>
-                <div class="text-xs text-slate-500 font-medium">Panel Warranty</div>
-              </div>
-              <div class="p-3 bg-white rounded-xl border border-slate-200 text-center">
-                <div class="font-display text-2xl font-bold text-slate-900">100%</div>
-                <div class="text-xs text-slate-500 font-medium">Net Meter Sanction</div>
-              </div>
-              <div class="p-3 bg-white rounded-xl border border-slate-200 text-center">
-                <div class="font-display text-2xl font-bold text-slate-900">2.5 Yrs</div>
-                <div class="text-xs text-slate-500 font-medium">Typical Payback</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Hero Bill Comparison Card -->
-          <div class="lg:col-span-5">
-            <div class="bg-white rounded-2xl border border-slate-200 shadow-md p-6 space-y-5">
-              <div class="flex items-center justify-between pb-3 border-b border-slate-100">
-                <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Real Customer Result</span>
-                <span class="text-xs font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">Mian Channu &middot; 1 Kanal</span>
-              </div>
-
-              <div class="grid grid-cols-2 gap-3">
-                <div class="p-3.5 rounded-xl bg-rose-50 border border-rose-100">
-                  <div class="text-[11px] font-bold text-rose-700 uppercase">Old Bill</div>
-                  <div class="text-xl font-display font-extrabold text-rose-950 mt-1">PKR 85,000</div>
-                  <div class="text-[11px] text-rose-600 mt-0.5">Heavy peak unit rates</div>
-                </div>
-
-                <div class="p-3.5 rounded-xl bg-emerald-50 border border-emerald-100">
-                  <div class="text-[11px] font-bold text-emerald-700 uppercase">With Solar</div>
-                  <div class="text-xl font-display font-extrabold text-emerald-950 mt-1">PKR 6,000</div>
-                  <div class="text-[11px] text-emerald-700 mt-0.5">93% Bill Reduction</div>
-                </div>
-              </div>
-
-              <div class="space-y-2 text-xs text-slate-600">
-                <div class="flex items-center gap-2">
-                  <i class="fa-solid fa-check text-emerald-600"></i>
-                  <span>System: <strong>10 kW with Green Meter</strong></span>
-                </div>
-                <div class="flex items-center gap-2">
-                  <i class="fa-solid fa-check text-emerald-600"></i>
-                  <span>Runs: <strong>3 Inverter ACs, Fridge, Fans &amp; Water Pump</strong></span>
-                </div>
-                <div class="flex items-center gap-2">
-                  <i class="fa-solid fa-check text-emerald-600"></i>
-                  <span>Extra daytime units sold to grid</span>
-                </div>
-              </div>
-
-              <button onclick="openQuoteModal('10 kW')" class="w-full py-2.5 bg-slate-900 hover:bg-slate-800 text-white rounded-xl text-xs font-semibold">
-                Get Similar Savings for Your Roof
-              </button>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- 4. INTERACTIVE SIZING & COST CALCULATOR -->
-    <section id="calculator" class="py-14 bg-slate-50 border-b border-slate-200 scroll-mt-16">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6">
-        
-        <div class="text-center mb-8">
-          <span class="text-emerald-700 text-xs font-bold uppercase tracking-wider bg-emerald-100 px-2.5 py-1 rounded">Quick Tool</span>
-          <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 mt-1.5">
-            Solar Sizing &amp; Cost Calculator
-          </h2>
-          <p class="text-xs sm:text-sm text-slate-600 mt-1">
-            Slide to your current monthly electricity bill to see the recommended solar size, roof space, and cost.
-          </p>
-        </div>
-
-        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 sm:p-8">
-
-          <!-- System Technology Toggle -->
-          <div class="flex items-center justify-center gap-2 mb-6">
-            <button type="button" id="btn-ongrid" onclick="setSystemType('ongrid')" class="px-4 py-2 rounded-lg text-xs font-bold border-2 border-emerald-600 bg-emerald-50 text-emerald-900 transition-all">
-              <i class="fa-solid fa-solar-panel mr-1"></i> On-Grid (Net Metering)
-            </button>
-            <button type="button" id="btn-hybrid" onclick="setSystemType('hybrid')" class="px-4 py-2 rounded-lg text-xs font-bold border-2 border-slate-200 bg-white text-slate-600 hover:border-slate-300 transition-all">
-              <i class="fa-solid fa-battery-full mr-1"></i> Hybrid (With Battery Backup)
-            </button>
-          </div>
-
-          <!-- Slider Area -->
-          <div class="bg-slate-50 p-5 sm:p-6 rounded-xl border border-slate-200 mb-6">
-            <div class="flex items-center justify-between mb-3">
-              <label for="bill-slider" class="text-xs sm:text-sm font-bold text-slate-800">Your Monthly Electricity Bill:</label>
-              <span id="bill-display" class="font-display text-2xl font-extrabold text-emerald-700">PKR 65,000</span>
-            </div>
-
-            <input type="range" id="bill-slider" min="20000" max="250000" step="5000" value="65000" oninput="updateCalculator(this.value)" class="w-full h-2.5 bg-slate-200 rounded-lg appearance-none cursor-pointer" />
-
-            <div class="flex justify-between text-[11px] text-slate-500 font-medium mt-2">
-              <span>PKR 20,000</span>
-              <span>PKR 100,000</span>
-              <span>PKR 175,000</span>
-              <span>PKR 250,000</span>
-            </div>
-
-            <!-- Quick Buttons -->
-            <div class="flex flex-wrap items-center gap-1.5 mt-3 pt-3 border-t border-slate-200">
-              <span class="text-xs text-slate-500 mr-1">Presets:</span>
-              <button type="button" onclick="setSliderValue(35000)" class="text-xs px-2.5 py-1 rounded bg-white hover:bg-slate-100 border border-slate-200 font-medium">35,000 (5 Marla)</button>
-              <button type="button" onclick="setSliderValue(65000)" class="text-xs px-2.5 py-1 rounded bg-white hover:bg-slate-100 border border-slate-200 font-medium">65,000 (10 Marla)</button>
-              <button type="button" onclick="setSliderValue(120000)" class="text-xs px-2.5 py-1 rounded bg-white hover:bg-slate-100 border border-slate-200 font-medium">120,000 (1 Kanal)</button>
-              <button type="button" onclick="setSliderValue(200000)" class="text-xs px-2.5 py-1 rounded bg-white hover:bg-slate-100 border border-slate-200 font-medium">200,000+ (Commercial)</button>
-            </div>
-          </div>
-
-          <!-- Output Results (4 Simple Cards) -->
-          <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-6">
+        <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
-            <div class="p-4 rounded-xl bg-emerald-50 border border-emerald-200">
-              <div class="text-[11px] font-bold text-emerald-800 uppercase">System Size</div>
-              <div id="calc-capacity" class="text-2xl font-display font-extrabold text-emerald-950 mt-1">10.0 kW</div>
-              <div class="text-[11px] text-emerald-700 mt-0.5"><span id="calc-units">1,250</span> Units/month</div>
+            <div class="lg:col-span-7 space-y-4">
+              <span class="inline-flex items-center gap-1.5 bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-xs font-bold px-3 py-1 rounded-full">
+                <i class="fa-solid fa-bolt text-amber-400"></i> Serving Mian Channu &amp; Punjab
+              </span>
+
+              <h1 class="font-display text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
+                Save Up to <span class="text-emerald-400">90% on Electricity Bills</span> with Solar
+              </h1>
+
+              <p class="text-base text-slate-300 max-w-xl leading-relaxed">
+                Big Sun Solar brings top-tier bifacial solar technology, smart inverters, and seamless Net Metering green meter sanctions directly to your doorstep in Mian Channu.
+              </p>
+
+              <!-- Hero Buttons -->
+              <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
+                <a href="https://wa.me/92300000000?text=Assalam-o-Alaikum!%20Here%20is%20my%20electricity%20bill.%20Please%20calculate%20how%20much%20solar%20I%20need." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white px-5 py-3 rounded-xl font-bold text-sm shadow-md transition-all">
+                  <i class="fa-brands fa-whatsapp text-lg text-amber-300"></i>
+                  <span>Send Bill on WhatsApp</span>
+                </a>
+                <a href="#calculator" class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white border border-white/20 px-5 py-3 rounded-xl font-semibold text-sm backdrop-blur-sm">
+                  <i class="fa-solid fa-calculator text-emerald-400"></i>
+                  <span>Calculate System Cost</span>
+                </a>
+              </div>
+
+              <!-- Trust Badges -->
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-6 border-t border-slate-800 text-center">
+                <div class="p-3 bg-white/5 backdrop-blur-xs rounded-xl border border-white/10">
+                  <div class="font-display text-2xl font-bold text-white">450+</div>
+                  <div class="text-xs text-slate-400">Turnkey Installs</div>
+                </div>
+                <div class="p-3 bg-white/5 backdrop-blur-xs rounded-xl border border-white/10">
+                  <div class="font-display text-2xl font-bold text-emerald-400">25 Yrs</div>
+                  <div class="text-xs text-slate-400">Panel Warranty</div>
+                </div>
+                <div class="p-3 bg-white/5 backdrop-blur-xs rounded-xl border border-white/10">
+                  <div class="font-display text-2xl font-bold text-amber-300">100%</div>
+                  <div class="text-xs text-slate-400">Green Meter Approval</div>
+                </div>
+                <div class="p-3 bg-white/5 backdrop-blur-xs rounded-xl border border-white/10">
+                  <div class="font-display text-2xl font-bold text-white">~2.2 Yrs</div>
+                  <div class="text-xs text-slate-400">Fast Payback</div>
+                </div>
+              </div>
             </div>
 
-            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
-              <div class="text-[11px] font-bold text-slate-600 uppercase">Roof Space</div>
-              <div id="calc-roof" class="text-2xl font-display font-extrabold text-slate-900 mt-1">750 sq.ft</div>
-              <div class="text-[11px] text-slate-500 mt-0.5">About <span id="calc-marla">3.3</span> Marlas</div>
-            </div>
+            <!-- Hero Result Card -->
+            <div class="lg:col-span-5">
+              <div class="bg-white text-slate-900 rounded-2xl border border-slate-200 shadow-2xl p-6 space-y-4">
+                <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+                  <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Live System Savings</span>
+                  <span class="text-xs font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">Mian Channu &middot; 1 Kanal</span>
+                </div>
 
-            <div class="p-4 rounded-xl bg-amber-50 border border-amber-200">
-              <div class="text-[11px] font-bold text-amber-800 uppercase">Monthly Saving</div>
-              <div id="calc-savings" class="text-2xl font-display font-extrabold text-amber-950 mt-1">PKR 58,500</div>
-              <div class="text-[11px] text-amber-700 mt-0.5"><span id="calc-annual">7.0 Lakh</span>/year</div>
-            </div>
+                <div class="grid grid-cols-2 gap-3">
+                  <div class="p-3.5 rounded-xl bg-rose-50 border border-rose-100">
+                    <div class="text-[11px] font-bold text-rose-700 uppercase">Old Bill</div>
+                    <div class="text-xl font-display font-extrabold text-rose-950 mt-1">PKR 85,000</div>
+                    <div class="text-[11px] text-rose-600 mt-0.5">Peak WAPDA tariff</div>
+                  </div>
 
-            <div class="p-4 rounded-xl bg-slate-900 text-white">
-              <div class="text-[11px] font-bold text-emerald-400 uppercase">Estimated Cost</div>
-              <div id="calc-cost" class="text-xl sm:text-2xl font-display font-extrabold text-white mt-1">11.5 - 12.8 L</div>
-              <div class="text-[11px] text-slate-400 mt-0.5">Payback: <span id="calc-payback" class="text-emerald-400">~1.8 Years</span></div>
+                  <div class="p-3.5 rounded-xl bg-emerald-50 border border-emerald-100">
+                    <div class="text-[11px] font-bold text-emerald-700 uppercase">With Solar</div>
+                    <div class="text-xl font-display font-extrabold text-emerald-950 mt-1">PKR 6,000</div>
+                    <div class="text-[11px] text-emerald-700 mt-0.5">93% Savings</div>
+                  </div>
+                </div>
+
+                <div class="space-y-2 text-xs text-slate-600">
+                  <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-check text-emerald-600"></i>
+                    <span>10 kW On-Grid with Bi-Directional Green Meter</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-check text-emerald-600"></i>
+                    <span>Powers 3 Inverter ACs, Refrigerator, Fans &amp; Water Pump</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-check text-emerald-600"></i>
+                    <span>Surplus energy exported to the local electricity grid</span>
+                  </div>
+                </div>
+
+                <button onclick="openQuoteModal('10 kW')" class="w-full py-2.5 bg-slate-900 hover:bg-slate-800 text-white rounded-xl text-xs font-semibold">
+                  Get Similar Savings for Your Roof
+                </button>
+              </div>
             </div>
 
           </div>
+        </div>
+      </section>
 
-          <!-- Bottom CTA -->
-          <div class="flex flex-col sm:flex-row items-center justify-between gap-3 p-3 bg-slate-50 rounded-xl border border-slate-200 text-xs">
-            <span class="text-slate-600 text-center sm:text-left">Price includes solar panels, inverter, mounting stand, wires, and green meter paperwork.</span>
-            <button onclick="sendCalculatorToWhatsApp()" class="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-lg font-bold shrink-0">
-              <i class="fa-brands fa-whatsapp"></i> WhatsApp This Estimate
+      <!-- INTERACTIVE CALCULATOR (PRESERVED) -->
+      <section id="calculator" class="py-14 bg-slate-50 border-b border-slate-200 scroll-mt-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+          <div class="text-center mb-8">
+            <span class="text-emerald-700 text-xs font-bold uppercase tracking-wider bg-emerald-100 px-2.5 py-1 rounded">Interactive Tool</span>
+            <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 mt-1.5">
+              Solar Sizing &amp; Cost Calculator
+            </h2>
+            <p class="text-xs sm:text-sm text-slate-600 mt-1">
+              Select system type and slide to your monthly bill for estimated size, roof area, and return on investment.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 sm:p-8">
+            <!-- System Type Toggle -->
+            <div class="flex items-center justify-center gap-2 mb-6">
+              <button type="button" id="btn-ongrid" onclick="setSystemType('ongrid')" class="px-4 py-2 rounded-lg text-xs font-bold border-2 border-emerald-600 bg-emerald-50 text-emerald-900 transition-all">
+                <i class="fa-solid fa-solar-panel mr-1"></i> On-Grid (Net Metering)
+              </button>
+              <button type="button" id="btn-hybrid" onclick="setSystemType('hybrid')" class="px-4 py-2 rounded-lg text-xs font-bold border-2 border-slate-200 bg-white text-slate-600 hover:border-slate-300 transition-all">
+                <i class="fa-solid fa-battery-full mr-1"></i> Hybrid (With Battery Backup)
+              </button>
+            </div>
+
+            <!-- Slider Area -->
+            <div class="bg-slate-50 p-5 sm:p-6 rounded-xl border border-slate-200 mb-6">
+              <div class="flex items-center justify-between mb-3">
+                <label for="bill-slider" class="text-xs sm:text-sm font-bold text-slate-800">Your Monthly Electricity Bill:</label>
+                <span id="bill-display" class="font-display text-2xl font-extrabold text-emerald-700">PKR 65,000</span>
+              </div>
+
+              <input type="range" id="bill-slider" min="20000" max="250000" step="5000" value="65000" oninput="updateCalculator(this.value)" class="w-full h-2.5 bg-slate-200 rounded-lg appearance-none cursor-pointer" />
+
+              <div class="flex justify-between text-[11px] text-slate-500 font-medium mt-2">
+                <span>PKR 20,000</span>
+                <span>PKR 100,000</span>
+                <span>PKR 175,000</span>
+                <span>PKR 250,000</span>
+              </div>
+
+              <div class="flex flex-wrap items-center gap-1.5 mt-3 pt-3 border-t border-slate-200">
+                <span class="text-xs text-slate-500 mr-1">Presets:</span>
+                <button type="button" onclick="setSliderValue(35000)" class="text-xs px-2.5 py-1 rounded bg-white hover:bg-slate-100 border border-slate-200 font-medium">35,000 (5 Marla)</button>
+                <button type="button" onclick="setSliderValue(65000)" class="text-xs px-2.5 py-1 rounded bg-white hover:bg-slate-100 border border-slate-200 font-medium">65,000 (10 Marla)</button>
+                <button type="button" onclick="setSliderValue(120000)" class="text-xs px-2.5 py-1 rounded bg-white hover:bg-slate-100 border border-slate-200 font-medium">120,000 (1 Kanal)</button>
+                <button type="button" onclick="setSliderValue(200000)" class="text-xs px-2.5 py-1 rounded bg-white hover:bg-slate-100 border border-slate-200 font-medium">200,000+ (Commercial)</button>
+              </div>
+            </div>
+
+            <!-- Output Cards -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-6">
+              <div class="p-4 rounded-xl bg-emerald-50 border border-emerald-200">
+                <div class="text-[11px] font-bold text-emerald-800 uppercase">System Size</div>
+                <div id="calc-capacity" class="text-2xl font-display font-extrabold text-emerald-950 mt-1">10.0 kW</div>
+                <div class="text-[11px] text-emerald-700 mt-0.5"><span id="calc-units">1,250</span> Units/month</div>
+              </div>
+
+              <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+                <div class="text-[11px] font-bold text-slate-600 uppercase">Roof Space</div>
+                <div id="calc-roof" class="text-2xl font-display font-extrabold text-slate-900 mt-1">750 sq.ft</div>
+                <div class="text-[11px] text-slate-500 mt-0.5">About <span id="calc-marla">3.3</span> Marlas</div>
+              </div>
+
+              <div class="p-4 rounded-xl bg-amber-50 border border-amber-200">
+                <div class="text-[11px] font-bold text-amber-800 uppercase">Monthly Saving</div>
+                <div id="calc-savings" class="text-2xl font-display font-extrabold text-amber-950 mt-1">PKR 58,500</div>
+                <div class="text-[11px] text-amber-700 mt-0.5"><span id="calc-annual">7.0 Lakh</span>/year</div>
+              </div>
+
+              <div class="p-4 rounded-xl bg-slate-900 text-white">
+                <div class="text-[11px] font-bold text-emerald-400 uppercase">Estimated Cost</div>
+                <div id="calc-cost" class="text-xl sm:text-2xl font-display font-extrabold text-white mt-1">11.5 - 12.8 L</div>
+                <div class="text-[11px] text-slate-400 mt-0.5">Payback: <span id="calc-payback" class="text-emerald-400">~1.8 Years</span></div>
+              </div>
+            </div>
+
+            <!-- WhatsApp estimate CTA -->
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-3 p-3 bg-slate-50 rounded-xl border border-slate-200 text-xs">
+              <span class="text-slate-600 text-center sm:text-left">Includes tier-1 panels, 3-phase inverter, mounting structure, wiring, and net metering file.</span>
+              <button onclick="sendCalculatorToWhatsApp()" class="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-lg font-bold shrink-0">
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp This Estimate
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PACKAGES OVERVIEW (PRESERVED) -->
+      <section class="py-14 bg-white border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          <div class="text-center mb-10">
+            <span class="text-emerald-700 text-xs font-bold uppercase tracking-wider bg-emerald-100 px-2.5 py-1 rounded">Turnkey Packages</span>
+            <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 mt-1.5">
+              Engineered For Reliability
+            </h2>
+            <p class="text-xs sm:text-sm text-slate-600 mt-1">Full BOQ breakdown with AEDB-approved hardware.</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+            <!-- 5 kW -->
+            <div class="bg-white rounded-2xl border border-slate-200 p-6 flex flex-col justify-between hover:shadow-md transition-shadow">
+              <div>
+                <div class="text-xs font-semibold text-slate-500 mb-1">5 to 7 Marla Homes</div>
+                <h3 class="font-display text-2xl font-bold text-slate-900">5 kW On-Grid</h3>
+                <div class="my-4 py-3 border-y border-slate-100">
+                  <div class="text-2xl font-display font-extrabold text-slate-900">PKR 595,000</div>
+                  <div class="text-xs text-emerald-700 font-semibold mt-0.5">Saves ~PKR 32,000/mo</div>
+                </div>
+                <ul class="space-y-2 text-xs text-slate-700">
+                  <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> 9x 585W Tier-1 Bifacial Panels</li>
+                  <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> 5 kW 3-Phase Smart Inverter</li>
+                  <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Galvanized Rust-proof Stand</li>
+                  <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Complete Green Meter Sanction</li>
+                </ul>
+              </div>
+              <div class="pt-6 space-y-2">
+                <button onclick="openBOQModal('5kw')" class="w-full py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg text-xs font-semibold">See BOQ</button>
+                <button onclick="openQuoteModal('5 kW On-Grid')" class="w-full py-2.5 bg-slate-900 hover:bg-slate-800 text-white rounded-lg text-xs font-semibold">Choose 5 kW</button>
+              </div>
+            </div>
+
+            <!-- 10 kW -->
+            <div class="bg-white rounded-2xl border-2 border-emerald-600 p-6 flex flex-col justify-between shadow-lg relative">
+              <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-emerald-600 text-white text-[11px] font-bold px-3 py-0.5 rounded-full uppercase">Most Popular</div>
+              <div>
+                <div class="text-xs font-semibold text-emerald-800 mb-1">10 Marla to 1 Kanal</div>
+                <h3 class="font-display text-2xl font-bold text-slate-900">10 kW Hybrid</h3>
+                <div class="my-4 py-3 border-y border-slate-100">
+                  <div class="text-2xl font-display font-extrabold text-emerald-950">PKR 1,520,000</div>
+                  <div class="text-xs text-emerald-700 font-semibold mt-0.5">With LiFePO4 Battery &middot; Saves ~PKR 75,000/mo</div>
+                </div>
+                <ul class="space-y-2 text-xs text-slate-700">
+                  <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> 18x 585W Bifacial Solar Panels</li>
+                  <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> 10 kW Deye / Nitrox Hybrid Inverter</li>
+                  <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> 5.12 kWh Lithium Battery Storage</li>
+                  <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Net Metering &amp; Dual Earthing Bores</li>
+                </ul>
+              </div>
+              <div class="pt-6 space-y-2">
+                <button onclick="openBOQModal('10kw')" class="w-full py-2 bg-emerald-50 hover:bg-emerald-100 text-emerald-900 rounded-lg text-xs font-semibold">See BOQ</button>
+                <button onclick="openQuoteModal('10 kW Hybrid')" class="w-full py-2.5 bg-emerald-700 hover:bg-emerald-800 text-white rounded-lg text-xs font-semibold">Choose 10 kW Hybrid</button>
+              </div>
+            </div>
+
+            <!-- 20 kW -->
+            <div class="bg-white rounded-2xl border border-slate-200 p-6 flex flex-col justify-between hover:shadow-md transition-shadow">
+              <div>
+                <div class="text-xs font-semibold text-slate-500 mb-1">Commercial Plazas &amp; Large Mansions</div>
+                <h3 class="font-display text-2xl font-bold text-slate-900">20 kW Commercial</h3>
+                <div class="my-4 py-3 border-y border-slate-100">
+                  <div class="text-2xl font-display font-extrabold text-slate-900">PKR 2,190,000</div>
+                  <div class="text-xs text-emerald-700 font-semibold mt-0.5">Saves ~PKR 140,000/mo</div>
+                </div>
+                <ul class="space-y-2 text-xs text-slate-700">
+                  <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> 35x 585W Tier-1 Solar Panels</li>
+                  <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> 20 kW Huawei / Sungrow Inverter</li>
+                  <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Heavy Industrial Customized Frame</li>
+                  <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Lightning Arrester &amp; Safety Pack</li>
+                </ul>
+              </div>
+              <div class="pt-6 space-y-2">
+                <button onclick="openBOQModal('20kw')" class="w-full py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg text-xs font-semibold">See BOQ</button>
+                <button onclick="openQuoteModal('20 kW Commercial')" class="w-full py-2.5 bg-slate-900 hover:bg-slate-800 text-white rounded-lg text-xs font-semibold">Choose 20 kW</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ==================== PAGE 2: RESIDENTIAL ==================== -->
+    <section id="page-residential" class="page-view hidden py-12 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        
+        <!-- Header Banner with Unsplash Residential Rooftop -->
+        <div class="relative rounded-3xl overflow-hidden mb-12 bg-slate-900 text-white">
+          <img 
+            src="https://images.unsplash.com/photo-1508873696983-2df5293cb32b?auto=format&fit=crop&w=800&q=80" 
+            alt="Residential Solar Roof" 
+            class="w-full h-72 sm:h-96 object-cover opacity-45"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/60 to-transparent flex items-end p-6 sm:p-10">
+            <div class="max-w-2xl space-y-2">
+              <span class="bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Residential Solutions</span>
+              <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-white">Power Your Home &bull; Eliminate Peak Unit Rates</h2>
+              <p class="text-xs sm:text-sm text-slate-200 leading-relaxed">
+                Engineered for 5 Marla, 10 Marla, and 1-2 Kanal residences. Custom elevated structures provide usable rooftop patio space while generating free green energy.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5kW, 10kW, 15kW Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-14">
+          <div class="bg-slate-50 border border-slate-200 p-6 rounded-2xl">
+            <span class="text-xs font-bold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded">Small Homes</span>
+            <h3 class="font-display text-xl font-bold text-slate-900 mt-2">5 kW Setup</h3>
+            <p class="text-xs text-slate-600 mt-1">Powers 1 Inverter AC (1.5 Ton), 1 Refrigerator, fans, and LED lights during daytime.</p>
+            <div class="mt-4 pt-4 border-t border-slate-200 text-xs space-y-2">
+              <div class="flex justify-between font-semibold"><span>Monthly Generation:</span><span class="text-slate-900">~600 - 650 Units</span></div>
+              <div class="flex justify-between font-semibold"><span>Roof Area Required:</span><span class="text-slate-900">380 sq.ft</span></div>
+              <div class="flex justify-between font-semibold text-emerald-700"><span>Monthly Bill Cut:</span><span>PKR 30,000+</span></div>
+            </div>
+            <button onclick="openQuoteModal('5 kW Residential')" class="w-full mt-5 py-2 bg-emerald-700 hover:bg-emerald-800 text-white rounded-lg text-xs font-semibold">Request 5 kW Proposal</button>
+          </div>
+
+          <div class="bg-slate-50 border-2 border-emerald-600 p-6 rounded-2xl relative shadow-md">
+            <span class="text-xs font-bold text-white bg-emerald-600 px-2 py-0.5 rounded">Most Preferred</span>
+            <h3 class="font-display text-xl font-bold text-slate-900 mt-2">10 kW Setup</h3>
+            <p class="text-xs text-slate-600 mt-1">Powers 2-3 Inverter ACs, refrigerator, deep freezer, and water pump. Ideal for 10 Marla to 1 Kanal.</p>
+            <div class="mt-4 pt-4 border-t border-slate-200 text-xs space-y-2">
+              <div class="flex justify-between font-semibold"><span>Monthly Generation:</span><span class="text-slate-900">~1,250 - 1,300 Units</span></div>
+              <div class="flex justify-between font-semibold"><span>Roof Area Required:</span><span class="text-slate-900">750 sq.ft</span></div>
+              <div class="flex justify-between font-semibold text-emerald-700"><span>Monthly Bill Cut:</span><span>PKR 65,000+</span></div>
+            </div>
+            <button onclick="openQuoteModal('10 kW Residential')" class="w-full mt-5 py-2 bg-emerald-700 hover:bg-emerald-800 text-white rounded-lg text-xs font-semibold">Request 10 kW Proposal</button>
+          </div>
+
+          <div class="bg-slate-50 border border-slate-200 p-6 rounded-2xl">
+            <span class="text-xs font-bold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded">Large Mansions</span>
+            <h3 class="font-display text-xl font-bold text-slate-900 mt-2">15 kW Setup</h3>
+            <p class="text-xs text-slate-600 mt-1">Powers 4-5 Inverter ACs, heavy domestic loads, and charges electric vehicles easily.</p>
+            <div class="mt-4 pt-4 border-t border-slate-200 text-xs space-y-2">
+              <div class="flex justify-between font-semibold"><span>Monthly Generation:</span><span class="text-slate-900">~1,850 - 1,950 Units</span></div>
+              <div class="flex justify-between font-semibold"><span>Roof Area Required:</span><span class="text-slate-900">1,100 sq.ft</span></div>
+              <div class="flex justify-between font-semibold text-emerald-700"><span>Monthly Bill Cut:</span><span>PKR 95,000+</span></div>
+            </div>
+            <button onclick="openQuoteModal('15 kW Residential')" class="w-full mt-5 py-2 bg-emerald-700 hover:bg-emerald-800 text-white rounded-lg text-xs font-semibold">Request 15 kW Proposal</button>
+          </div>
+        </div>
+
+        <!-- Structure Details & Before/After Card -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center bg-slate-50 p-6 sm:p-10 rounded-3xl border border-slate-200">
+          <div class="space-y-4">
+            <h3 class="font-display text-2xl font-bold text-slate-900">Elevated Galvanized Rooftop Structure</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Don't lose your roof! Big Sun Solar constructs certified 8 to 10 feet elevated frames made from hot-dipped galvanized steel pipes (12-gauge or 14-gauge). This allows complete roof walking space, laundry drying, and evening family sit-outs under the shade of your solar canopy.
+            </p>
+            <div class="grid grid-cols-2 gap-3 text-xs">
+              <div class="p-3 bg-white rounded-xl border border-slate-200">
+                <i class="fa-solid fa-wind text-emerald-600 mb-1"></i>
+                <div class="font-bold text-slate-900">130+ km/h Wind Tested</div>
+                <div class="text-[11px] text-slate-500">Chemical anchoring with Hilti bolts</div>
+              </div>
+              <div class="p-3 bg-white rounded-xl border border-slate-200">
+                <i class="fa-solid fa-shield-halved text-emerald-600 mb-1"></i>
+                <div class="font-bold text-slate-900">Zero Roof Leakage</div>
+                <div class="text-[11px] text-slate-500">Waterproof sealant &amp; column pads</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Before / After Bill Comparison Card -->
+          <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-md space-y-4">
+            <h4 class="font-bold text-sm text-slate-800 border-b border-slate-100 pb-2">Verified DISCO Electricity Bill Audit</h4>
+            
+            <div class="space-y-3">
+              <div>
+                <div class="flex justify-between text-xs font-semibold mb-1">
+                  <span class="text-rose-700">Before Solar (Summer Month):</span>
+                  <span class="text-rose-700 font-bold">PKR 92,400</span>
+                </div>
+                <div class="w-full bg-slate-100 rounded-full h-3">
+                  <div class="bg-rose-500 h-3 rounded-full" style="width: 100%"></div>
+                </div>
+                <span class="text-[10px] text-slate-400">1,350 Units consumed at peak tariff rates + taxes</span>
+              </div>
+
+              <div>
+                <div class="flex justify-between text-xs font-semibold mb-1">
+                  <span class="text-emerald-700">After 10 kW Net Metering:</span>
+                  <span class="text-emerald-700 font-bold">PKR 4,800</span>
+                </div>
+                <div class="w-full bg-slate-100 rounded-full h-3">
+                  <div class="bg-emerald-600 h-3 rounded-full" style="width: 6%"></div>
+                </div>
+                <span class="text-[10px] text-emerald-700 font-medium">94.8% Monthly Bill Reduction + Carry-forward credits</span>
+              </div>
+            </div>
+
+            <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+              <span class="text-slate-500">Annual Savings:</span>
+              <span class="font-bold text-slate-900 text-sm">PKR 1,051,200 / year</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== PAGE 3: COMMERCIAL & INDUSTRIAL ==================== -->
+    <section id="page-commercial" class="page-view hidden py-12 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        
+        <!-- Header Banner with Unsplash Commercial Plant -->
+        <div class="relative rounded-3xl overflow-hidden mb-12 bg-slate-900 text-white">
+          <img 
+            src="https://images.unsplash.com/photo-1545209575-70335e2361d9?auto=format&fit=crop&w=800&q=80" 
+            alt="Commercial Solar Plant" 
+            class="w-full h-72 sm:h-96 object-cover opacity-45"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/60 to-transparent flex items-end p-6 sm:p-10">
+            <div class="max-w-2xl space-y-2">
+              <span class="bg-amber-500 text-slate-950 text-xs font-bold px-3 py-1 rounded-full uppercase">Commercial &amp; Industrial</span>
+              <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-white">50 kW to 500 kW MW-Scale Solar Plants</h2>
+              <p class="text-xs sm:text-sm text-slate-200 leading-relaxed">
+                Slashing operational expenses for textile mills, cold storages, petrol pumps, educational institutes, and commercial shopping centers.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scale Capacities -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          <div class="bg-slate-50 border border-slate-200 p-6 rounded-2xl">
+            <div class="text-xs font-bold text-amber-700 uppercase">Commercial Plazas &amp; Schools</div>
+            <h3 class="font-display text-2xl font-bold text-slate-900 mt-1">50 kW - 100 kW</h3>
+            <p class="text-xs text-slate-600 mt-2">Eliminate heavy daytime grid consumption from HVAC, lighting, and elevator motors.</p>
+            <div class="mt-4 pt-3 border-t border-slate-200 text-xs space-y-1.5">
+              <div class="flex justify-between"><span>Monthly Yield:</span><strong>6,500 - 13,000 Units</strong></div>
+              <div class="flex justify-between"><span>Payback Period:</span><strong class="text-emerald-700">1.8 - 2.1 Years</strong></div>
+            </div>
+          </div>
+
+          <div class="bg-slate-50 border border-slate-200 p-6 rounded-2xl">
+            <div class="text-xs font-bold text-amber-700 uppercase">Mills &amp; Cold Storage</div>
+            <h3 class="font-display text-2xl font-bold text-slate-900 mt-1">100 kW - 250 kW</h3>
+            <p class="text-xs text-slate-600 mt-2">Zero out peak unit tariffs and export excess daytime megawatts to the grid under B-2 / B-3 industrial net metering.</p>
+            <div class="mt-4 pt-3 border-t border-slate-200 text-xs space-y-1.5">
+              <div class="flex justify-between"><span>Monthly Yield:</span><strong>13,000 - 32,500 Units</strong></div>
+              <div class="flex justify-between"><span>Payback Period:</span><strong class="text-emerald-700">1.7 - 2.0 Years</strong></div>
+            </div>
+          </div>
+
+          <div class="bg-slate-50 border border-slate-200 p-6 rounded-2xl">
+            <div class="text-xs font-bold text-amber-700 uppercase">Heavy Industry &amp; Factories</div>
+            <h3 class="font-display text-2xl font-bold text-slate-900 mt-1">250 kW - 500 kW+</h3>
+            <p class="text-xs text-slate-600 mt-2">High-efficiency string inverters (Huawei / Sungrow) with remote SCADA telemetry and cloud performance diagnostics.</p>
+            <div class="mt-4 pt-3 border-t border-slate-200 text-xs space-y-1.5">
+              <div class="flex justify-between"><span>Monthly Yield:</span><strong>32,500 - 65,000+ Units</strong></div>
+              <div class="flex justify-between"><span>Payback Period:</span><strong class="text-emerald-700">~1.6 Years</strong></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Financial & Payback Breakdown Table -->
+        <div class="bg-slate-900 text-white rounded-3xl p-6 sm:p-10 border border-slate-800">
+          <div class="max-w-2xl mb-6">
+            <h3 class="font-display text-2xl font-bold text-white">Commercial Financial Payback Model</h3>
+            <p class="text-xs sm:text-sm text-slate-400 mt-1">Calculated at current average industrial tariffs with solar depreciation benefits.</p>
+          </div>
+
+          <div class="overflow-x-auto">
+            <table class="w-full text-xs text-left">
+              <thead class="bg-slate-800 text-slate-300 uppercase tracking-wider text-[11px]">
+                <tr>
+                  <th class="p-3 rounded-l-lg">System Size</th>
+                  <th class="p-3">Monthly Production</th>
+                  <th class="p-3">Monthly Savings</th>
+                  <th class="p-3">Annual Savings</th>
+                  <th class="p-3 rounded-r-lg">Estimated Payback</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-800 text-slate-200">
+                <tr>
+                  <td class="p-3 font-bold text-white">50 kW Plant</td>
+                  <td class="p-3">6,250 Units</td>
+                  <td class="p-3 text-emerald-400 font-semibold">PKR 393,000</td>
+                  <td class="p-3">PKR 4.7 Million</td>
+                  <td class="p-3 text-amber-300 font-bold">~1.9 Years</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-bold text-white">100 kW Plant</td>
+                  <td class="p-3">12,500 Units</td>
+                  <td class="p-3 text-emerald-400 font-semibold">PKR 787,500</td>
+                  <td class="p-3">PKR 9.4 Million</td>
+                  <td class="p-3 text-amber-300 font-bold">~1.8 Years</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-bold text-white">250 kW Plant</td>
+                  <td class="p-3">31,250 Units</td>
+                  <td class="p-3 text-emerald-400 font-semibold">PKR 1,968,000</td>
+                  <td class="p-3">PKR 23.6 Million</td>
+                  <td class="p-3 text-amber-300 font-bold">~1.7 Years</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-bold text-white">500 kW Plant</td>
+                  <td class="p-3">62,500 Units</td>
+                  <td class="p-3 text-emerald-400 font-semibold">PKR 3,937,500</td>
+                  <td class="p-3">PKR 47.2 Million</td>
+                  <td class="p-3 text-amber-300 font-bold">~1.6 Years</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-slate-800">
+            <span class="text-xs text-slate-400">Want an industrial feasibility study for your factory or textile unit?</span>
+            <button onclick="openQuoteModal('Commercial Plant')" class="bg-emerald-600 hover:bg-emerald-500 text-white px-5 py-2.5 rounded-xl font-bold text-xs shadow-md">
+              Book Industrial Feasibility Survey
             </button>
           </div>
-
         </div>
 
       </div>
     </section>
 
-    <!-- 5. TURNKEY PACKAGES GRID WITH FULL BOQ DETAILS -->
-    <section id="packages" class="py-14 bg-white border-b border-slate-200 scroll-mt-16">
+    <!-- ==================== PAGE 4: OUR TEAM ==================== -->
+    <section id="page-team" class="page-view hidden py-12 bg-white">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         
-        <div class="text-center mb-10">
-          <span class="text-emerald-700 text-xs font-bold uppercase tracking-wider bg-emerald-100 px-2.5 py-1 rounded">Simple Pricing</span>
-          <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 mt-1.5">
-            Turnkey Solar Packages
-          </h2>
-          <p class="text-xs sm:text-sm text-slate-600 mt-1">
-            Complete price including hardware, installation, and net metering. No hidden costs.
-          </p>
+        <!-- Header Banner with Unsplash Engineering Team -->
+        <div class="relative rounded-3xl overflow-hidden mb-12 bg-slate-900 text-white">
+          <img 
+            src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" 
+            alt="Professional Engineering Team" 
+            class="w-full h-72 sm:h-96 object-cover opacity-45"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/60 to-transparent flex items-end p-6 sm:p-10">
+            <div class="max-w-2xl space-y-2">
+              <span class="bg-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Leadership &amp; Engineers</span>
+              <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-white">Certified Solar EPC Professionals</h2>
+              <p class="text-xs sm:text-sm text-slate-200 leading-relaxed">
+                Backed by Pakistan Engineering Council (PEC) accredited electrical engineers and experienced net-metering liaison officers.
+              </p>
+            </div>
+          </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+        <!-- Team Roles Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           
-          <!-- Package 1: 5 kW On-Grid -->
-          <div class="bg-white rounded-2xl border border-slate-200 p-6 flex flex-col justify-between hover:shadow-md transition-shadow">
-            <div>
-              <div class="text-xs font-semibold text-slate-500 mb-1">For 5 to 7 Marla Homes</div>
-              <h3 class="font-display text-2xl font-bold text-slate-900">5 kW On-Grid</h3>
-              <p class="text-xs text-slate-500 mt-0.5">Ideal for bills between PKR 25,000 to 45,000</p>
-              
-              <div class="my-4 py-3 border-y border-slate-100">
-                <div class="text-2xl font-display font-extrabold text-slate-900">PKR 595,000</div>
-                <div class="text-xs text-emerald-700 font-semibold mt-0.5">Saves ~PKR 32,000 every month</div>
-              </div>
-
-              <div class="space-y-2 text-xs text-slate-700">
-                <div class="font-bold text-slate-900 uppercase text-[11px]">Included in BOQ:</div>
-                <div class="flex items-start gap-2">
-                  <i class="fa-solid fa-check text-emerald-600 mt-0.5"></i>
-                  <span><strong>9x Tier-1 Bifacial Panels</strong> (Longi/Jinko 585W)</span>
-                </div>
-                <div class="flex items-start gap-2">
-                  <i class="fa-solid fa-check text-emerald-600 mt-0.5"></i>
-                  <span><strong>5 kW 3-Phase Inverter</strong> with phone app</span>
-                </div>
-                <div class="flex items-start gap-2">
-                  <i class="fa-solid fa-check text-emerald-600 mt-0.5"></i>
-                  <span><strong>Galvanized Iron Stand</strong> (Rust-proof)</span>
-                </div>
-                <div class="flex items-start gap-2">
-                  <i class="fa-solid fa-check text-emerald-600 mt-0.5"></i>
-                  <span><strong>Safety Breakers &amp; Earth Bore</strong></span>
-                </div>
-                <div class="flex items-start gap-2">
-                  <i class="fa-solid fa-check text-emerald-600 mt-0.5"></i>
-                  <span><strong>Green Meter Sanction (Net Metering)</strong></span>
-                </div>
-              </div>
+          <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 space-y-3">
+            <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-xl font-bold">
+              <i class="fa-solid fa-graduation-cap"></i>
             </div>
-
-            <div class="pt-6 space-y-2">
-              <button onclick="openBOQModal('5kw')" class="w-full py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg text-xs font-semibold">
-                See Full Item List (BOQ)
-              </button>
-              <button onclick="openQuoteModal('5 kW On-Grid')" class="w-full py-2.5 bg-slate-900 hover:bg-slate-800 text-white rounded-lg text-xs font-semibold">
-                Choose 5 kW Package
-              </button>
+            <h3 class="font-display text-lg font-bold text-slate-900">PEC-Certified Electrical Engineers</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Conduct rigorous string calculations, inverter sizing, voltage drop analysis, and short-circuit protections according to IEEE and IEC specifications.
+            </p>
+            <div class="text-[11px] font-semibold text-emerald-700 flex items-center gap-1.5 pt-2 border-t border-slate-200">
+              <i class="fa-solid fa-certificate"></i> PEC Registered (Level 1)
             </div>
           </div>
 
-          <!-- Package 2: 10 kW Hybrid (Featured) -->
-          <div class="bg-white rounded-2xl border-2 border-emerald-600 p-6 flex flex-col justify-between shadow-lg relative">
-            <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-emerald-600 text-white text-[11px] font-bold px-3 py-0.5 rounded-full uppercase tracking-wider">
-              Most Popular
+          <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 space-y-3">
+            <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center text-xl font-bold">
+              <i class="fa-solid fa-ruler-combined"></i>
             </div>
-
-            <div>
-              <div class="text-xs font-semibold text-emerald-800 mb-1">For 10 Marla to 1 Kanal Homes</div>
-              <h3 class="font-display text-2xl font-bold text-slate-900">10 kW Hybrid</h3>
-              <p class="text-xs text-slate-500 mt-0.5">Runs ACs during load shedding + Net Metering</p>
-              
-              <div class="my-4 py-3 border-y border-slate-100">
-                <div class="text-2xl font-display font-extrabold text-emerald-950">PKR 1,520,000</div>
-                <div class="text-xs text-emerald-700 font-semibold mt-0.5">With Lithium Battery &middot; Saves ~PKR 75,000/mo</div>
-              </div>
-
-              <div class="space-y-2 text-xs text-slate-700">
-                <div class="font-bold text-slate-900 uppercase text-[11px]">Included in BOQ:</div>
-                <div class="flex items-start gap-2">
-                  <i class="fa-solid fa-check text-emerald-600 mt-0.5"></i>
-                  <span><strong>18x Tier-1 Bifacial Panels</strong> (585W Longi/Jinko)</span>
-                </div>
-                <div class="flex items-start gap-2">
-                  <i class="fa-solid fa-check text-emerald-600 mt-0.5"></i>
-                  <span><strong>10 kW Deye / Nitrox Hybrid Inverter</strong></span>
-                </div>
-                <div class="flex items-start gap-2">
-                  <i class="fa-solid fa-check text-emerald-600 mt-0.5"></i>
-                  <span><strong>5.12 kWh Lithium Battery</strong> (10-year life)</span>
-                </div>
-                <div class="flex items-start gap-2">
-                  <i class="fa-solid fa-check text-emerald-600 mt-0.5"></i>
-                  <span><strong>Zero-Flicker UPS Backup</strong> for 2-3 ACs &amp; home</span>
-                </div>
-                <div class="flex items-start gap-2">
-                  <i class="fa-solid fa-check text-emerald-600 mt-0.5"></i>
-                  <span><strong>Green Meter Sanction (Net Metering)</strong></span>
-                </div>
-              </div>
-            </div>
-
-            <div class="pt-6 space-y-2">
-              <button onclick="openBOQModal('10kw')" class="w-full py-2 bg-emerald-50 hover:bg-emerald-100 text-emerald-900 rounded-lg text-xs font-semibold">
-                See Full Item List (BOQ)
-              </button>
-              <button onclick="openQuoteModal('10 kW Hybrid')" class="w-full py-2.5 bg-emerald-700 hover:bg-emerald-800 text-white rounded-lg text-xs font-semibold shadow-xs">
-                Choose 10 kW Hybrid
-              </button>
+            <h3 class="font-display text-lg font-bold text-slate-900">Structural Design &amp; Fabrication Crew</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Specialists in high-rise, elevated roof frames, structural load-bearing checks, and corrosion-resistant hot-dip galvanization techniques.
+            </p>
+            <div class="text-[11px] font-semibold text-amber-700 flex items-center gap-1.5 pt-2 border-t border-slate-200">
+              <i class="fa-solid fa-shield-halved"></i> 130 km/h Wind Load Certified
             </div>
           </div>
 
-          <!-- Package 3: 20 kW Commercial -->
-          <div class="bg-white rounded-2xl border border-slate-200 p-6 flex flex-col justify-between hover:shadow-md transition-shadow">
-            <div>
-              <div class="text-xs font-semibold text-slate-500 mb-1">For Plazas, Mills &amp; Large Houses</div>
-              <h3 class="font-display text-2xl font-bold text-slate-900">20 kW Commercial</h3>
-              <p class="text-xs text-slate-500 mt-0.5">Ideal for bills between PKR 140,000 to 250,000+</p>
-              
-              <div class="my-4 py-3 border-y border-slate-100">
-                <div class="text-2xl font-display font-extrabold text-slate-900">PKR 2,190,000</div>
-                <div class="text-xs text-emerald-700 font-semibold mt-0.5">Saves ~PKR 140,000 every month</div>
-              </div>
-
-              <div class="space-y-2 text-xs text-slate-700">
-                <div class="font-bold text-slate-900 uppercase text-[11px]">Included in BOQ:</div>
-                <div class="flex items-start gap-2">
-                  <i class="fa-solid fa-check text-emerald-600 mt-0.5"></i>
-                  <span><strong>35x Tier-1 Bifacial Solar Panels</strong></span>
-                </div>
-                <div class="flex items-start gap-2">
-                  <i class="fa-solid fa-check text-emerald-600 mt-0.5"></i>
-                  <span><strong>20 kW Huawei / Sungrow Inverter</strong></span>
-                </div>
-                <div class="flex items-start gap-2">
-                  <i class="fa-solid fa-check text-emerald-600 mt-0.5"></i>
-                  <span><strong>Industrial Galvanized Steel Frame</strong></span>
-                </div>
-                <div class="flex items-start gap-2">
-                  <i class="fa-solid fa-check text-emerald-600 mt-0.5"></i>
-                  <span><strong>Dual Earth Bores + Lightning Rod</strong></span>
-                </div>
-                <div class="flex items-start gap-2">
-                  <i class="fa-solid fa-check text-emerald-600 mt-0.5"></i>
-                  <span><strong>Commercial Net Meter Sanctioning</strong></span>
-                </div>
-              </div>
+          <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 space-y-3">
+            <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center text-xl font-bold">
+              <i class="fa-solid fa-file-signature"></i>
             </div>
-
-            <div class="pt-6 space-y-2">
-              <button onclick="openBOQModal('20kw')" class="w-full py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg text-xs font-semibold">
-                See Full Item List (BOQ)
-              </button>
-              <button onclick="openQuoteModal('20 kW Commercial')" class="w-full py-2.5 bg-slate-900 hover:bg-slate-800 text-white rounded-lg text-xs font-semibold">
-                Choose 20 kW Package
-              </button>
+            <h3 class="font-display text-lg font-bold text-slate-900">Net-Metering Liaison Specialists</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Dedicated field officers handling complete end-to-end DISCO documentation, SDO approvals, XEN sanctioning, and green meter procurement.
+            </p>
+            <div class="text-[11px] font-semibold text-blue-700 flex items-center gap-1.5 pt-2 border-t border-slate-200">
+              <i class="fa-solid fa-circle-check"></i> 100% Approval Rate
             </div>
           </div>
 
+        </div>
+
+        <!-- Engineering Quality Standards -->
+        <div class="bg-emerald-50 border border-emerald-200 rounded-3xl p-6 sm:p-8">
+          <h3 class="font-display text-xl font-bold text-emerald-950 mb-4">Our Engineering Quality Checklist</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-xs text-emerald-900">
+            <div class="bg-white p-3 rounded-xl border border-emerald-200">
+              <div class="font-bold mb-1"><i class="fa-solid fa-microchip text-emerald-600 mr-1"></i> Flash Test Reports</div>
+              <p class="text-[11px] text-slate-600">Every panel barcoded with genuine Tier-1 factory wattage authentication.</p>
+            </div>
+            <div class="bg-white p-3 rounded-xl border border-emerald-200">
+              <div class="font-bold mb-1"><i class="fa-solid fa-plug text-emerald-600 mr-1"></i> Pure Copper DC Cables</div>
+              <p class="text-[11px] text-slate-600">Double-insulated XLPO solar cabling preventing energy losses.</p>
+            </div>
+            <div class="bg-white p-3 rounded-xl border border-emerald-200">
+              <div class="font-bold mb-1"><i class="fa-solid fa-tower-broadcast text-emerald-600 mr-1"></i> Earth Resistance &lt; 5&Omega;</div>
+              <p class="text-[11px] text-slate-600">Chemical earthing bores with earth-tester certified low-resistance readings.</p>
+            </div>
+            <div class="bg-white p-3 rounded-xl border border-emerald-200">
+              <div class="font-bold mb-1"><i class="fa-solid fa-mobile-screen-button text-emerald-600 mr-1"></i> Mobile App Monitoring</div>
+              <p class="text-[11px] text-slate-600">Real-time daily, monthly generation telemetry sent right to your smartphone.</p>
+            </div>
+          </div>
         </div>
 
       </div>
     </section>
 
-    <!-- 6. NET METERING EXPLAINER (4 SIMPLE STEPS) -->
-    <section id="netmetering" class="py-14 bg-slate-900 text-white border-b border-slate-800 scroll-mt-16">
+    <!-- ==================== PAGE 5: CONTACT US ==================== -->
+    <section id="page-contact" class="page-view hidden py-12 bg-white">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         
-        <div class="text-center mb-10">
-          <span class="text-emerald-400 text-xs font-bold uppercase tracking-wider bg-emerald-950 px-2.5 py-1 rounded border border-emerald-800">
-            Net Metering
-          </span>
-          <h2 class="font-display text-2xl sm:text-3xl font-bold text-white mt-1.5">
-            Net Metering in 4 Simple Steps
-          </h2>
-          <p class="text-xs sm:text-sm text-slate-400 mt-1">
-            We handle 100% of the paperwork with the electricity office. You don't have to visit any office.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          
-          <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
-            <div class="text-emerald-400 font-display font-extrabold text-xl mb-2">01</div>
-            <h3 class="font-bold text-sm text-white">Free Roof Survey</h3>
-            <p class="text-xs text-slate-300 mt-1">
-              We visit your property in Mian Channu, measure your roof, and check your 3-phase meter.
-            </p>
-            <div class="text-[11px] text-emerald-400 font-medium mt-3">Day 1 - 2</div>
-          </div>
-
-          <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
-            <div class="text-emerald-400 font-display font-extrabold text-xl mb-2">02</div>
-            <h3 class="font-bold text-sm text-white">Application &amp; NOC</h3>
-            <p class="text-xs text-slate-300 mt-1">
-              Our certified engineer prepares the drawings and submits your file to the electricity office for approval.
-            </p>
-            <div class="text-[11px] text-emerald-400 font-medium mt-3">Day 3 - 10</div>
-          </div>
-
-          <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
-            <div class="text-emerald-400 font-display font-extrabold text-xl mb-2">03</div>
-            <h3 class="font-bold text-sm text-white">Quick Installation</h3>
-            <p class="text-xs text-slate-300 mt-1">
-              We install your panels, stand, inverter, and earthing bore. The electricity officer inspects the site.
-            </p>
-            <div class="text-[11px] text-emerald-400 font-medium mt-3">Day 11 - 20</div>
-          </div>
-
-          <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
-            <div class="text-emerald-400 font-display font-extrabold text-xl mb-2">04</div>
-            <h3 class="font-bold text-sm text-white">Green Meter Installed</h3>
-            <p class="text-xs text-slate-300 mt-1">
-              Your old meter is replaced with the new Green Meter. Your extra solar units start running backwards!
-            </p>
-            <div class="text-[11px] text-emerald-400 font-medium mt-3">Day 21 - 30</div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- FAQS (SIMPLE & CLEAR) -->
-    <section id="faq" class="py-14 bg-white border-b border-slate-200 scroll-mt-16">
-      <div class="max-w-3xl mx-auto px-4 sm:px-6">
-        
-        <div class="text-center mb-8">
-          <h2 class="font-display text-2xl font-bold text-slate-900">
-            Questions You Might Have
-          </h2>
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <span class="text-emerald-700 text-xs font-bold uppercase tracking-wider bg-emerald-100 px-2.5 py-1 rounded">Get In Touch</span>
+          <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 mt-1.5">Branch Offices &amp; Free Quote Request</h2>
           <p class="text-xs sm:text-sm text-slate-500 mt-1">
-            Simple answers to common questions about solar in Mian Channu &amp; Punjab.
+            Reach our engineering teams directly or generate your customized WhatsApp quote below.
           </p>
         </div>
 
-        <div class="space-y-3">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
-          <div class="border border-slate-200 rounded-xl">
-            <button onclick="toggleFaq(1)" class="w-full p-4 text-left font-semibold text-slate-800 text-xs sm:text-sm flex items-center justify-between">
-              <span>What is the difference between On-Grid and Hybrid?</span>
-              <i id="faq-icon-1" class="fa-solid fa-chevron-down text-xs text-slate-400"></i>
-            </button>
-            <div id="faq-content-1" class="hidden px-4 pb-4 text-xs text-slate-600 leading-relaxed border-t border-slate-100 pt-2">
-              <strong>On-Grid</strong> sells daytime power to the grid to zero your bill, but turns off during load shedding. <br>
-              <strong>Hybrid</strong> does everything On-Grid does PLUS has a battery to run your ACs and lights during load shedding without any blackout.
+          <!-- Branch Offices Cards -->
+          <div class="lg:col-span-6 space-y-4">
+            
+            <!-- Mian Channu Office -->
+            <div class="bg-slate-50 border border-slate-200 p-5 rounded-2xl">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-bold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded">Head Office</span>
+                <span class="text-xs text-slate-500 font-medium">District Khanewal</span>
+              </div>
+              <h3 class="font-display text-lg font-bold text-slate-900 mt-2">Mian Channu Branch</h3>
+              <p class="text-xs text-slate-600 mt-1">Main G.T. Road, Near Bus Stand &amp; City Chowk, Mian Channu, Punjab</p>
+              <div class="mt-4 pt-3 border-t border-slate-200 flex flex-wrap gap-4 text-xs font-semibold text-slate-700">
+                <a href="tel:0300000000" class="hover:text-emerald-700 flex items-center gap-1.5">
+                  <i class="fa-solid fa-phone text-emerald-600"></i> 0300000000
+                </a>
+                <a href="https://wa.me/92300000000" target="_blank" class="hover:text-emerald-700 flex items-center gap-1.5">
+                  <i class="fa-brands fa-whatsapp text-emerald-600"></i> 0300000000
+                </a>
+              </div>
             </div>
+
+            <!-- Lahore Regional Branch -->
+            <div class="bg-slate-50 border border-slate-200 p-5 rounded-2xl">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-bold text-blue-800 bg-blue-100 px-2 py-0.5 rounded">Lahore Regional Office</span>
+                <span class="text-xs text-slate-500 font-medium">Central Punjab</span>
+              </div>
+              <h3 class="font-display text-lg font-bold text-slate-900 mt-2">DHA Phase 5, Lahore</h3>
+              <p class="text-xs text-slate-600 mt-1">Commercial Area, DHA Phase 5 (Adjacent to Jalal Sons), Lahore</p>
+              <div class="mt-4 pt-3 border-t border-slate-200 flex flex-wrap gap-4 text-xs font-semibold text-slate-700">
+                <a href="tel:0300000000" class="hover:text-emerald-700 flex items-center gap-1.5">
+                  <i class="fa-solid fa-phone text-emerald-600"></i> 0300000000
+                </a>
+                <a href="https://wa.me/92300000000" target="_blank" class="hover:text-emerald-700 flex items-center gap-1.5">
+                  <i class="fa-brands fa-whatsapp text-emerald-600"></i> WhatsApp Support
+                </a>
+              </div>
+            </div>
+
+            <!-- Faisalabad Regional Branch -->
+            <div class="bg-slate-50 border border-slate-200 p-5 rounded-2xl">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-bold text-amber-800 bg-amber-100 px-2 py-0.5 rounded">Faisalabad Regional Office</span>
+                <span class="text-xs text-slate-500 font-medium">Industrial Zone</span>
+              </div>
+              <h3 class="font-display text-lg font-bold text-slate-900 mt-2">Canal Road, Faisalabad</h3>
+              <p class="text-xs text-slate-600 mt-1">Suite 14, Kohinoor 1 Plaza, Main Jaranwala Road, Near D-Ground, Faisalabad</p>
+              <div class="mt-4 pt-3 border-t border-slate-200 flex flex-wrap gap-4 text-xs font-semibold text-slate-700">
+                <a href="tel:0300000000" class="hover:text-emerald-700 flex items-center gap-1.5">
+                  <i class="fa-solid fa-phone text-emerald-600"></i> 0300000000
+                </a>
+                <a href="https://wa.me/92300000000" target="_blank" class="hover:text-emerald-700 flex items-center gap-1.5">
+                  <i class="fa-brands fa-whatsapp text-emerald-600"></i> WhatsApp Support
+                </a>
+              </div>
+            </div>
+
           </div>
 
-          <div class="border border-slate-200 rounded-xl">
-            <button onclick="toggleFaq(2)" class="w-full p-4 text-left font-semibold text-slate-800 text-xs sm:text-sm flex items-center justify-between">
-              <span>Do I need a 3-Phase meter for Net Metering?</span>
-              <i id="faq-icon-2" class="fa-solid fa-chevron-down text-xs text-slate-400"></i>
-            </button>
-            <div id="faq-content-2" class="hidden px-4 pb-4 text-xs text-slate-600 leading-relaxed border-t border-slate-100 pt-2">
-              Yes, a 3-phase meter is required for net metering. If you currently have a single-phase meter, our team handles the conversion for you.
+          <!-- Interactive WhatsApp Quote Generator Form -->
+          <div class="lg:col-span-6 bg-white border border-slate-200 rounded-2xl p-6 shadow-md">
+            <div class="border-b border-slate-100 pb-3 mb-4">
+              <h3 class="font-display text-lg font-bold text-slate-900">Instant WhatsApp Quote Generator</h3>
+              <p class="text-xs text-slate-500 mt-0.5">Fill this quick form to calculate and send your specifications directly to our lead engineer.</p>
             </div>
-          </div>
 
-          <div class="border border-slate-200 rounded-xl">
-            <button onclick="toggleFaq(3)" class="w-full p-4 text-left font-semibold text-slate-800 text-xs sm:text-sm flex items-center justify-between">
-              <span>How long does the Green Meter take?</span>
-              <i id="faq-icon-3" class="fa-solid fa-chevron-down text-xs text-slate-400"></i>
-            </button>
-            <div id="faq-content-3" class="hidden px-4 pb-4 text-xs text-slate-600 leading-relaxed border-t border-slate-100 pt-2">
-              In Mian Channu, the complete process usually takes <strong>3 to 4 weeks</strong>. We handle all approvals with the SDO and XEN.
-            </div>
-          </div>
+            <form onsubmit="handleContactPageSubmit(event)" class="space-y-3 text-xs">
+              <div>
+                <label class="block font-semibold text-slate-700 mb-1">Your Full Name *</label>
+                <input type="text" id="contact-name" required placeholder="e.g. Asad Raza" class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:outline-hidden" />
+              </div>
 
-          <div class="border border-slate-200 rounded-xl">
-            <button onclick="toggleFaq(4)" class="w-full p-4 text-left font-semibold text-slate-800 text-xs sm:text-sm flex items-center justify-between">
-              <span>What warranties are provided?</span>
-              <i id="faq-icon-4" class="fa-solid fa-chevron-down text-xs text-slate-400"></i>
-            </button>
-            <div id="faq-content-4" class="hidden px-4 pb-4 text-xs text-slate-600 leading-relaxed border-t border-slate-100 pt-2">
-              &bull; 25-Year warranty on solar panels.<br>
-              &bull; 5-Year warranty on inverters.<br>
-              &bull; 5 to 10-Year warranty on lithium batteries.<br>
-              &bull; 1-Year free maintenance and checkups.
-            </div>
+              <div>
+                <label class="block font-semibold text-slate-700 mb-1">Phone / WhatsApp Number *</label>
+                <input type="tel" id="contact-phone" required placeholder="0300000000" class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:outline-hidden" />
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div>
+                  <label class="block font-semibold text-slate-700 mb-1">Select City / Area *</label>
+                  <select id="contact-city" class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-hidden bg-white">
+                    <option value="Mian Channu" selected>Mian Channu</option>
+                    <option value="Lahore">Lahore</option>
+                    <option value="Faisalabad">Faisalabad</option>
+                    <option value="Other Area">Other Punjab City</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block font-semibold text-slate-700 mb-1">System Capacity</label>
+                  <select id="contact-package" class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-hidden bg-white">
+                    <option value="5 kW On-Grid">5 kW On-Grid</option>
+                    <option value="10 kW Hybrid" selected>10 kW Hybrid</option>
+                    <option value="15 kW Residential">15 kW Residential</option>
+                    <option value="20 kW Commercial">20 kW Commercial</option>
+                    <option value="50 kW+ Industrial">50 kW+ Industrial Plant</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label class="block font-semibold text-slate-700 mb-1">Average Monthly WAPDA Bill (PKR) *</label>
+                <input type="number" id="contact-bill" required placeholder="65000" class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-hidden" />
+              </div>
+
+              <div>
+                <label class="block font-semibold text-slate-700 mb-1">Additional Requirements / Notes</label>
+                <textarea id="contact-notes" rows="2" placeholder="e.g. Need elevated structure for 1 Kanal house" class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-hidden"></textarea>
+              </div>
+
+              <div class="pt-2">
+                <button type="submit" class="w-full py-3 bg-emerald-700 hover:bg-emerald-800 text-white rounded-lg font-bold text-xs flex items-center justify-center gap-2 shadow-xs transition-colors">
+                  <i class="fa-brands fa-whatsapp text-base"></i>
+                  <span>Send Quote Request on WhatsApp</span>
+                </button>
+              </div>
+            </form>
           </div>
 
         </div>
 
-      </div>
-    </section>
-
-    <!-- OFFICE ADDRESSES & CONTACT -->
-    <section class="py-12 bg-slate-50 border-b border-slate-200">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6">
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          
-          <div class="bg-white p-5 rounded-xl border border-slate-200">
-            <div class="text-xs font-bold text-emerald-800 bg-emerald-100 inline-block px-2 py-0.5 rounded mb-2">Main Office</div>
-            <h3 class="font-bold text-sm text-slate-900">G.T. Road, Mian Channu</h3>
-            <p class="text-xs text-slate-500 mt-1">Main G.T. Road, Near Bus Stand &amp; City Chowk, Mian Channu</p>
-            <div class="mt-3 text-xs font-semibold text-slate-700 flex items-center gap-2">
-              <i class="fa-solid fa-phone text-emerald-600"></i>
-              <a href="tel:+92300000000" class="hover:text-emerald-700">0300000000</a>
-            </div>
-          </div>
-
-          <div class="bg-white p-5 rounded-xl border border-slate-200">
-            <div class="text-xs font-bold text-amber-800 bg-amber-100 inline-block px-2 py-0.5 rounded mb-2">Site Surveys &amp; Support</div>
-            <h3 class="font-bold text-sm text-slate-900">Mian Channu &amp; Surroundings</h3>
-            <p class="text-xs text-slate-500 mt-1">Free on-site roof survey, net metering file processing &amp; turnkey installation</p>
-            <div class="mt-3 text-xs font-semibold text-slate-700 flex items-center gap-2">
-              <i class="fa-brands fa-whatsapp text-emerald-600"></i>
-              <a href="https://wa.me/92300000000" class="hover:text-emerald-700">WhatsApp: 0300000000</a>
-            </div>
-          </div>
-
-        </div>
       </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-slate-950 text-slate-400 text-xs py-8">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-4">
-        <div>
-          <span class="font-display font-extrabold text-white text-base">BIG SUN SOLAR</span>
-          <p class="text-[11px] text-slate-500 mt-0.5">AEDB Certified Category V-1 &middot; Net Metering Specialists</p>
+    <footer class="bg-slate-950 text-slate-400 text-xs py-10 mt-12 border-t border-slate-900">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 text-center sm:text-left">
+          <div class="space-y-2">
+            <span class="font-display font-extrabold text-white text-base block">BIG SUN SOLAR</span>
+            <p class="text-[11px] text-slate-400 leading-relaxed">
+              AEDB Certified Category V-1 solar engineering company providing On-Grid and Hybrid net-metering systems.
+            </p>
+          </div>
+          <div>
+            <span class="text-white font-semibold block mb-2">Navigation</span>
+            <ul class="space-y-1 text-[11px]">
+              <li><button onclick="navigateTo('home')" class="hover:text-emerald-400">Home</button></li>
+              <li><button onclick="navigateTo('residential')" class="hover:text-emerald-400">Residential Solar</button></li>
+              <li><button onclick="navigateTo('commercial')" class="hover:text-emerald-400">Commercial &amp; Industrial</button></li>
+              <li><button onclick="navigateTo('team')" class="hover:text-emerald-400">Our Team</button></li>
+              <li><button onclick="navigateTo('contact')" class="hover:text-emerald-400">Contact Us</button></li>
+            </ul>
+          </div>
+          <div>
+            <span class="text-white font-semibold block mb-2">Branch Locations</span>
+            <ul class="space-y-1 text-[11px] text-slate-400">
+              <li>Mian Channu: Main G.T. Road</li>
+              <li>Lahore: DHA Phase 5 Commercial</li>
+              <li>Faisalabad: Canal Road Kohinoor</li>
+            </ul>
+          </div>
+          <div>
+            <span class="text-white font-semibold block mb-2">Helpline</span>
+            <p class="text-[11px] text-slate-400">Call / WhatsApp: 0300000000</p>
+            <p class="text-[11px] text-emerald-400 font-semibold mt-1">Open Mon - Sat: 9am - 7pm</p>
+          </div>
         </div>
-        <div class="text-[11px] text-slate-500">
-          &copy; 2026 Big Sun Solar. Mian Channu, Pakistan.
+
+        <div class="pt-6 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px]">
+          <div>&copy; 2026 Big Sun Solar. All Rights Reserved.</div>
+          <div class="text-slate-500">Mian Channu &bull; Lahore &bull; Faisalabad</div>
         </div>
       </div>
     </footer>
 
-    <!-- 7. STICKY MOBILE FOOTER (Strictly <= 15% Viewport Height) -->
+    <!-- STICKY MOBILE CALL / WHATSAPP BAR -->
     <div class="fixed bottom-0 inset-x-0 z-50 bg-white/95 backdrop-blur-md border-t border-slate-200 px-3 py-2 md:hidden shadow-lg" style="max-height: 12vh;">
       <div class="grid grid-cols-2 gap-2">
-        <a href="tel:+92300000000" class="flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-white py-2.5 px-3 rounded-lg font-bold text-xs">
+        <a href="tel:0300000000" class="flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-white py-2.5 px-3 rounded-lg font-bold text-xs">
           <i class="fa-solid fa-phone text-emerald-400"></i>
           <span>Call</span>
         </a>
@@ -670,30 +930,24 @@
       </div>
     </div>
 
-    <!-- SIMPLE BOQ MODAL -->
+    <!-- BOQ MODAL -->
     <div id="boq-modal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4">
       <div class="bg-white rounded-2xl max-w-lg w-full max-h-[85vh] overflow-y-auto border border-slate-200 shadow-xl p-5 sm:p-6">
         <div class="flex items-center justify-between pb-3 border-b border-slate-200">
-          <h3 id="boq-modal-title" class="font-display text-lg font-bold text-slate-900">Package Items List (BOQ)</h3>
+          <h3 id="boq-modal-title" class="font-display text-lg font-bold text-slate-900">Package BOQ Details</h3>
           <button onclick="closeBOQModal()" class="w-7 h-7 rounded-full bg-slate-100 text-slate-500 flex items-center justify-center">
             <i class="fa-solid fa-xmark"></i>
           </button>
         </div>
-
         <div id="boq-modal-body" class="py-4 text-xs text-slate-700"></div>
-
         <div class="pt-3 border-t border-slate-200 flex justify-end gap-2">
-          <button onclick="closeBOQModal()" class="px-3.5 py-1.5 border border-slate-200 rounded-lg text-slate-700 font-semibold text-xs">
-            Close
-          </button>
-          <button onclick="closeBOQModal(); openQuoteModal();" class="px-3.5 py-1.5 bg-emerald-700 text-white rounded-lg font-semibold text-xs">
-            Get Quote
-          </button>
+          <button onclick="closeBOQModal()" class="px-3.5 py-1.5 border border-slate-200 rounded-lg text-slate-700 font-semibold text-xs">Close</button>
+          <button onclick="closeBOQModal(); openQuoteModal();" class="px-3.5 py-1.5 bg-emerald-700 text-white rounded-lg font-semibold text-xs">Get Quote</button>
         </div>
       </div>
     </div>
 
-    <!-- SIMPLE QUOTE MODAL -->
+    <!-- FREE QUOTE MODAL -->
     <div id="quote-modal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4">
       <div class="bg-white rounded-2xl max-w-md w-full max-h-[90vh] overflow-y-auto border border-slate-200 shadow-xl p-5 sm:p-6">
         <div class="flex items-center justify-between pb-3 border-b border-slate-200">
@@ -706,12 +960,12 @@
         <form id="quote-form" onsubmit="handleQuoteSubmit(event)" class="py-4 space-y-3 text-xs">
           <div>
             <label class="block font-semibold text-slate-700 mb-1">Your Name *</label>
-            <input type="text" id="quote-name" required placeholder="e.g. Tariq Ahmad" class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:outline-hidden" />
+            <input type="text" id="quote-name" required placeholder="e.g. Tariq Ahmad" class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-emerald-500" />
           </div>
 
           <div>
             <label class="block font-semibold text-slate-700 mb-1">WhatsApp / Phone *</label>
-            <input type="tel" id="quote-phone" required placeholder="0300000000" class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:outline-hidden" />
+            <input type="tel" id="quote-phone" required placeholder="0300000000" class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-emerald-500" />
           </div>
 
           <div class="grid grid-cols-2 gap-2">
@@ -719,6 +973,8 @@
               <label class="block font-semibold text-slate-700 mb-1">City *</label>
               <select id="quote-city" class="w-full px-2.5 py-2 border border-slate-300 rounded-lg focus:outline-hidden bg-white">
                 <option value="Mian Channu" selected>Mian Channu</option>
+                <option value="Lahore">Lahore</option>
+                <option value="Faisalabad">Faisalabad</option>
               </select>
             </div>
             <div>
@@ -726,6 +982,7 @@
               <select id="quote-package" class="w-full px-2.5 py-2 border border-slate-300 rounded-lg focus:outline-hidden bg-white">
                 <option value="5 kW On-Grid">5 kW On-Grid</option>
                 <option value="10 kW Hybrid" selected>10 kW Hybrid</option>
+                <option value="15 kW Residential">15 kW Residential</option>
                 <option value="20 kW Commercial">20 kW Commercial</option>
               </select>
             </div>
@@ -746,43 +1003,70 @@
       </div>
     </div>
 
-    <!-- JAVASCRIPT -->
+    <!-- JAVASCRIPT FOR MULTI-PAGE TABS & CALCULATORS -->
     <script>
+      // Multi-Page Tab Navigation
+      function navigateTo(pageId) {
+        const pages = document.querySelectorAll('.page-view');
+        pages.forEach(p => p.classList.add('hidden'));
+
+        const target = document.getElementById('page-' + pageId);
+        if (target) {
+          target.classList.remove('hidden');
+        }
+
+        // Update nav tabs state
+        const tabs = document.querySelectorAll('.nav-tab');
+        tabs.forEach(t => {
+          t.className = 'nav-tab px-3 py-1.5 rounded-lg hover:text-emerald-700 hover:bg-slate-50 transition-colors text-slate-600';
+        });
+
+        const activeTab = document.getElementById('tab-' + pageId);
+        if (activeTab) {
+          activeTab.className = 'nav-tab px-3 py-1.5 rounded-lg text-emerald-700 bg-emerald-50 font-bold transition-colors';
+        }
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      // Mobile Menu
+      function toggleMobileMenu() {
+        const menu = document.getElementById('mobile-menu');
+        const icon = document.getElementById('menu-icon');
+        if (menu.classList.contains('hidden')) {
+          menu.classList.remove('hidden');
+          icon.classList.remove('fa-bars');
+          icon.classList.add('fa-xmark');
+        } else {
+          menu.classList.add('hidden');
+          icon.classList.remove('fa-xmark');
+          icon.classList.add('fa-bars');
+        }
+      }
+
+      // Calculator logic
       let currentSystemType = 'ongrid';
       let currentBill = 65000;
 
       function calculateSolar(bill, type) {
         const ratePerUnit = 63;
         const unitsNeeded = bill / ratePerUnit;
-        
         let kw = Math.max(3, Math.round((unitsNeeded / 125) * 2) / 2);
         if (kw > 50) kw = 50;
 
         const unitsGenerated = Math.round(kw * 125);
         const roofArea = Math.round(kw * 75);
         const marlas = (roofArea / 225).toFixed(1);
-
         const monthlySavings = Math.round(Math.min(bill * 0.92, unitsGenerated * ratePerUnit));
         const annualSavings = monthlySavings * 12;
 
         const minRate = type === 'ongrid' ? 112000 : 152000;
         const maxRate = type === 'ongrid' ? 126000 : 168000;
-
         const minLakhs = ((kw * minRate) / 100000).toFixed(1);
         const maxLakhs = ((kw * maxRate) / 100000).toFixed(1);
         const payback = ((kw * minRate) / annualSavings).toFixed(1);
 
-        return {
-          kw: kw.toFixed(1),
-          unitsGenerated,
-          roofArea,
-          marlas,
-          monthlySavings,
-          annualLakhs: (annualSavings / 100000).toFixed(1),
-          minLakhs,
-          maxLakhs,
-          payback
-        };
+        return { kw: kw.toFixed(1), unitsGenerated, roofArea, marlas, monthlySavings, annualLakhs: (annualSavings / 100000).toFixed(1), minLakhs, maxLakhs, payback };
       }
 
       function updateCalculator(value) {
@@ -823,103 +1107,40 @@
       function sendCalculatorToWhatsApp() {
         const d = calculateSolar(currentBill, currentSystemType);
         const text = encodeURIComponent(
-          `Assalam-o-Alaikum Big Sun Solar!\n\nHere are my bill calculator results:\n- Current Bill: PKR ${currentBill.toLocaleString()}\n- Recommended System: ${d.kw} kW (${currentSystemType === 'ongrid' ? 'On-Grid' : 'Hybrid'})\n- Monthly Savings: PKR ${d.monthlySavings.toLocaleString()}\n- Roof Area: ${d.roofArea} sq.ft (${d.marlas} Marla)\n- Cost: PKR ${d.minLakhs} - ${d.maxLakhs} Lakh\n\nPlease send me a detailed quote.`
+          `Assalam-o-Alaikum Big Sun Solar!\n\nHere are my bill calculator results:\n- Current Bill: PKR ${currentBill.toLocaleString()}\n- Recommended System: ${d.kw} kW (${currentSystemType === 'ongrid' ? 'On-Grid' : 'Hybrid'})\n- Monthly Savings: PKR ${d.monthlySavings.toLocaleString()}\n- Roof Area: ${d.roofArea} sq.ft (${d.marlas} Marla)\n- Cost: PKR ${d.minLakhs} - ${d.maxLakhs} Lakh\n\nPlease share quote details.`
         );
         window.open(`https://wa.me/92300000000?text=${text}`, '_blank');
       }
 
-      function toggleMobileMenu() {
-        const menu = document.getElementById('mobile-menu');
-        const icon = document.getElementById('menu-icon');
-        if (menu.classList.contains('hidden')) {
-          menu.classList.remove('hidden');
-          icon.classList.remove('fa-bars');
-          icon.classList.add('fa-xmark');
-        } else {
-          menu.classList.add('hidden');
-          icon.classList.remove('fa-xmark');
-          icon.classList.add('fa-bars');
-        }
+      // Contact Page Submit
+      function handleContactPageSubmit(e) {
+        e.preventDefault();
+        const name = document.getElementById('contact-name').value;
+        const phone = document.getElementById('contact-phone').value;
+        const city = document.getElementById('contact-city').value;
+        const pkg = document.getElementById('contact-package').value;
+        const bill = document.getElementById('contact-bill').value;
+        const notes = document.getElementById('contact-notes').value;
+
+        const text = encodeURIComponent(
+          `Assalam-o-Alaikum Big Sun Solar!\n\nNew Inquiry from Website:\n- Name: ${name}\n- Phone: ${phone}\n- City: ${city}\n- System: ${pkg}\n- Monthly Bill: PKR ${parseInt(bill, 10).toLocaleString()}\n- Notes: ${notes || 'None'}\n\nPlease share feasibility & proposal.`
+        );
+        window.open(`https://wa.me/92300000000?text=${text}`, '_blank');
       }
 
-      function toggleFaq(id) {
-        const content = document.getElementById(`faq-content-${id}`);
-        const icon = document.getElementById(`faq-icon-${id}`);
-        if (content.classList.contains('hidden')) {
-          content.classList.remove('hidden');
-          icon.classList.add('rotate-180');
-        } else {
-          content.classList.add('hidden');
-          icon.classList.remove('rotate-180');
-        }
-      }
-
+      // Modal functions
       const simpleBOQ = {
         '5kw': {
           title: '5 kW On-Grid - Included Items',
-          html: `
-            <div class="space-y-2">
-              <div class="p-2.5 bg-slate-50 rounded-lg border border-slate-200">
-                <strong>1. Solar Panels:</strong> 9x 585W Tier-1 Bifacial panels (Longi or Jinko). 25-year warranty.
-              </div>
-              <div class="p-2.5 bg-slate-50 rounded-lg border border-slate-200">
-                <strong>2. Inverter:</strong> 5 kW 3-Phase on-grid inverter (Growatt / Solis) with WiFi mobile app.
-              </div>
-              <div class="p-2.5 bg-slate-50 rounded-lg border border-slate-200">
-                <strong>3. Stand:</strong> Heavy duty galvanized iron structure with stainless steel nuts &amp; bolts.
-              </div>
-              <div class="p-2.5 bg-slate-50 rounded-lg border border-slate-200">
-                <strong>4. Electrical &amp; Safety:</strong> Pure copper DC cables, Schneider breakers, and earth bore.
-              </div>
-              <div class="p-2.5 bg-slate-50 rounded-lg border border-slate-200">
-                <strong>5. Net Metering:</strong> Complete green meter file submission and approval in Mian Channu.
-              </div>
-            </div>
-          `
+          html: `<div class="space-y-2"><div class="p-2.5 bg-slate-50 rounded-lg border border-slate-200"><strong>1. Solar Panels:</strong> 9x 585W Tier-1 Bifacial panels (Longi/Jinko). 25-yr warranty.</div><div class="p-2.5 bg-slate-50 rounded-lg border border-slate-200"><strong>2. Inverter:</strong> 5 kW 3-Phase on-grid inverter with WiFi mobile app.</div><div class="p-2.5 bg-slate-50 rounded-lg border border-slate-200"><strong>3. Stand:</strong> Heavy duty rust-proof galvanized iron structure.</div><div class="p-2.5 bg-slate-50 rounded-lg border border-slate-200"><strong>4. Net Metering:</strong> Complete green meter file submission and approval in Mian Channu & Punjab.</div></div>`
         },
         '10kw': {
           title: '10 kW Hybrid - Included Items (Featured)',
-          html: `
-            <div class="space-y-2">
-              <div class="p-2.5 bg-emerald-50 rounded-lg border border-emerald-200">
-                <strong>1. Solar Panels:</strong> 18x 585W Tier-1 Bifacial panels (Longi / Jinko). 25-year warranty.
-              </div>
-              <div class="p-2.5 bg-slate-50 rounded-lg border border-slate-200">
-                <strong>2. Hybrid Inverter:</strong> 10 kW Deye / Nitrox hybrid inverter with smart load control.
-              </div>
-              <div class="p-2.5 bg-slate-50 rounded-lg border border-slate-200">
-                <strong>3. Lithium Battery:</strong> 5.12 kWh LiFePO4 battery (runs ACs during load shedding).
-              </div>
-              <div class="p-2.5 bg-slate-50 rounded-lg border border-slate-200">
-                <strong>4. Stand:</strong> Heavy galvanized iron rooftop structure.
-              </div>
-              <div class="p-2.5 bg-slate-50 rounded-lg border border-slate-200">
-                <strong>5. Net Metering:</strong> Complete green meter sanction and installation in Mian Channu.
-              </div>
-            </div>
-          `
+          html: `<div class="space-y-2"><div class="p-2.5 bg-emerald-50 rounded-lg border border-emerald-200"><strong>1. Solar Panels:</strong> 18x 585W Tier-1 Bifacial panels (Longi/Jinko). 25-yr warranty.</div><div class="p-2.5 bg-slate-50 rounded-lg border border-slate-200"><strong>2. Inverter:</strong> 10 kW Deye / Nitrox hybrid inverter with smart load control.</div><div class="p-2.5 bg-slate-50 rounded-lg border border-slate-200"><strong>3. Lithium Battery:</strong> 5.12 kWh LiFePO4 battery (zero-flicker UPS backup).</div><div class="p-2.5 bg-slate-50 rounded-lg border border-slate-200"><strong>4. Net Metering:</strong> Complete DISCO green meter sanction and installation.</div></div>`
         },
         '20kw': {
           title: '20 kW Commercial - Included Items',
-          html: `
-            <div class="space-y-2">
-              <div class="p-2.5 bg-slate-50 rounded-lg border border-slate-200">
-                <strong>1. Solar Panels:</strong> 35x 585W Tier-1 Bifacial panels for high output.
-              </div>
-              <div class="p-2.5 bg-slate-50 rounded-lg border border-slate-200">
-                <strong>2. Inverter:</strong> 20 kW commercial 3-phase inverter (Huawei SUN2000 / Sungrow).
-              </div>
-              <div class="p-2.5 bg-slate-50 rounded-lg border border-slate-200">
-                <strong>3. Stand:</strong> Commercial steel mounting structure for flat roof or factory shed.
-              </div>
-              <div class="p-2.5 bg-slate-50 rounded-lg border border-slate-200">
-                <strong>4. Protection:</strong> Dual earthing bores, copper lightning arrester, and heavy breakers.
-              </div>
-              <div class="p-2.5 bg-slate-50 rounded-lg border border-slate-200">
-                <strong>5. Commercial Net Metering:</strong> Complete load extension and green meter sanction.
-              </div>
-            </div>
-          `
+          html: `<div class="space-y-2"><div class="p-2.5 bg-slate-50 rounded-lg border border-slate-200"><strong>1. Solar Panels:</strong> 35x 585W Tier-1 Bifacial panels.</div><div class="p-2.5 bg-slate-50 rounded-lg border border-slate-200"><strong>2. Inverter:</strong> 20 kW commercial 3-phase inverter (Huawei/Sungrow).</div><div class="p-2.5 bg-slate-50 rounded-lg border border-slate-200"><strong>3. Stand:</strong> Customized industrial mounting frame with dual earthing and lightning arrester.</div><div class="p-2.5 bg-slate-50 rounded-lg border border-slate-200"><strong>4. Commercial Net Metering:</strong> Load extension and green meter sanction.</div></div>`
         }
       };
 
